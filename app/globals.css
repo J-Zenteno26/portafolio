@@ -26,32 +26,10 @@ body {
   line-height: 1.65;
 }
 
-/* HEADINGS */
-
-h1 {
-  font-size: 2.8rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-}
-
-h3 {
-  font-size: 1.3rem;
-  font-weight: 500;
-}
 
 /* TEXTO */
 
-p {
-  font-size: 1.05rem;
-  color: #444;
-}
+
 
 .text-muted {
   color: #6b7280;
@@ -62,6 +40,61 @@ p {
 
 .soft-shadow {
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* HERO UTILITIES */
+
+.hero-title {
+  color: white;
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.45),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.01em;
+}
+
+.hero-text {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-1px);
+}
+
+.hero-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.28) 0%,
+      rgba(245, 241, 233, 0.18) 38%,
+      rgba(245, 241, 233, 0.62) 100%
+    );
 }
 
 /* RESPONSIVE */
