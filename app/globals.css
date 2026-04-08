@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f5f1e9;
+  --primary: #355f4a;
+  --secondary: #6b8f71;
+  --text: #2b2b2b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* SMOOTH FONT (premium look) */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* BASE */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    180deg,
+    #f5f1e9 0%,
+    #f0ebe3 100%
+  );
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* HEADINGS */
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* TEXTO */
+
+p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.text-muted {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* SOMBRAS */
+
+.soft-shadow {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  body {
+    font-size: 1.1rem;
+  }
 }
