@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portafolio Profesional – Jeanette Zenteno
 
-## Getting Started
+Portafolio web desarrollado para presentar mi experiencia como Ingeniera de Software y Datos, destacando proyectos, habilidades técnicas y resolución de problemas reales mediante ingeniería aplicada.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Sobre el proyecto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este portafolio fue diseñado y desarrollado con foco en:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Experiencia de usuario clara y moderna
+- Narrativa técnica basada en problemas reales
+- Visualización de impacto mediante métricas
+- Diseño responsive
+- Despliegue en producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tecnologías utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js (App Router)
+- React
+- Tailwind CSS
+- Framer Motion
+- Vercel
+- GitHub
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Enfoque profesional
 
-## Deploy on Vercel
+Este portafolio no está diseñado como un CV tradicional, sino como una representación de:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Resolución de problemas complejos
+- Optimización de sistemas existentes
+- Diseño de soluciones escalables
+- Integración y procesamiento de datos
+- Automatización de procesos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Secciones principales
+
+- Problemas que resolví
+- Experiencia profesional
+- Educación
+- Skills técnicas
+- Métricas de impacto
+- Contacto
+
+---
+
+## Características del proyecto
+
+- Animaciones suaves con Framer Motion
+- Tooltips informativos en métricas
+- Navbar responsive con menú mobile
+- Hero con imagen de fondo y overlay
+- Diseño limpio y consistente
+
+---
+
+## Demo en producción
+
+https://TU-URL-VERCEL.vercel.app
+
+---
+
+## Estructura del proyecto
