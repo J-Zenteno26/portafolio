@@ -215,21 +215,62 @@ export default function Home() {
       </section>
 
       {/* PERSONAL */}
-      <section className="px-10 py-16 max-w-4xl mx-auto text-center">
-        <p className="text-[0.95rem] text-gray-500 leading-relaxed">
-          Fuera del código, disfruto pintar en acrílico y crear pastelería,
-          explorando procesos creativos que también aplico en el desarrollo de soluciones.
-        </p>
+      <section className="px-10 py-20 max-w-4xl mx-auto">
+        <div className="bg-white/60 backdrop-blur-md rounded-2xl p-8 shadow-sm">
+
+          <h2 className="text-xl font-semibold mb-4 text-[var(--primary)]">
+            Más allá del código
+          </h2>
+
+          <p className="text-base text-gray-600 leading-relaxed font-light">
+            Fuera del código, disfruto pintar en acrílico y crear pastelería,
+            explorando procesos creativos que también aplico en el desarrollo de soluciones.
+          </p>
+
+        </div>
       </section>
 
       {/* CONTACTO */}
       <Reveal>
-        <section id="contact" className="px-10 py-20 text-center">
-          <h2 className="text-2xl font-semibold mb-6">Contacto</h2>
-          <p className="text-base">zentenoestefania6@gmail.com</p>
-          <p className="text-base">LinkedIn: jeanette-zenteno</p>
+        <section id="contact" className="px-10 py-24 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-8">Contacto</h2>
+
+          <div className="space-y-4 text-lg">
+
+            {/* EMAIL */}
+            <p>
+              <span className="font-medium">Email:</span>{" "}
+              <a
+                href="mailto:zentenoestefania6@gmail.com"
+                className="hover:text-[var(--primary)] transition-colors underline underline-offset-4"
+              >
+                zentenoestefania6@gmail.com
+              </a>
+            </p>
+
+            {/* LINKEDIN */}
+            <p>
+              <span className="font-medium">LinkedIn:</span>{" "}
+              <a
+                href="https://www.linkedin.com/in/jeanette-zenteno"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--primary)] transition-colors underline underline-offset-4"
+              >
+                www.linkedin.com/in/jeanette-zenteno
+              </a>
+            </p>
+
+          </div>
         </section>
       </Reveal>
+
+      {/* FOOTER */}
+      <footer className="mt-20 bg-[var(--primary)] text-white py-6 border-t border-white/10">
+        <div className="max-w-6xl mx-auto px-6 text-center text-sm tracking-wide opacity-90">
+          Built by Jeanette Zenteno
+        </div>
+      </footer>
     </main>
   );
 }
