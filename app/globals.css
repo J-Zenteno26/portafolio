@@ -12,6 +12,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* globals.css */
+::-webkit-scrollbar {
+  display: none;
+}
 
 /* BASE */
 body {
@@ -25,11 +29,6 @@ body {
   font-size: 1.05rem;
   line-height: 1.65;
 }
-
-
-/* TEXTO */
-
-
 
 .text-muted {
   color: #6b7280;

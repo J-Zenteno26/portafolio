@@ -7,6 +7,7 @@ import Problemas from "@/components/Problemas";
 import Experiencia from "@/components/Experiencia";
 import Educacion from "@/components/Educacion";
 import Skills from "@/components/Skills";
+import Proyectos from "@/components/Proyectos";
 
 export default function Home() {
   return (
@@ -81,12 +82,12 @@ export default function Home() {
               className="mt-8 flex gap-4"
             >
               <a
-                href="#impact"
-                className="px-6 py-3 bg-[var(--primary)] text-white rounded-lg shadow-md hover:scale-[1.03] transition"
+                href="#Proyectos"
+                className="inline-flex items-center gap-2 px-6 py-3  bg-[var(--primary)] text-white rounded-lg shadow-md  hover:scale-[1.05] hover:shadow-lg transition-all duration-300"
               >
                 Ver proyectos
+                <span className="transition group-hover:translate-x-1">→</span>
               </a>
-
               <a
                 href="/Jeanette_Zenteno_Software_Data_Engineer.pdf.pdf"
                 target="_blank"
@@ -178,8 +179,16 @@ export default function Home() {
           Problemas que resolví
           <span className="block h-[2px] w-12 bg-[var(--secondary)] mt-2"></span>
         </h2>
-
         <Problemas />
+      </section>
+
+      {/* PROYECTOS */}
+      <section id="Proyectos" className="px-10 py-20 max-w-5xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-8 relative inline-block">
+          Proyectos destacados
+          <span className="block h-[2px] w-12 bg-[var(--secondary)] mt-2"></span>
+        </h2>
+        <Proyectos />
       </section>
 
       {/* EXPERIENCIA */}
@@ -188,7 +197,6 @@ export default function Home() {
           Experiencia
           <span className="block h-[2px] w-12 bg-[var(--secondary)] mt-2"></span>
         </h2>
-
         <Experiencia />
       </section>
 
