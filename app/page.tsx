@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Reveal from "@/components/Reveal";
 import { motion } from "framer-motion";
@@ -9,7 +9,22 @@ import Educacion from "@/components/Educacion";
 import Skills from "@/components/Skills";
 import Proyectos from "@/components/Proyectos";
 
+
+
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const images = [
+    "/images/foto1.jpg",
+    "/images/foto2.jpg",
+    "/images/foto4.jpg",
+    "/images/torta1.jpg",
+    "/images/torta2.jpg",
+    "/images/torta5.jpg",
+  ];
+
   return (
     <main>
       <Navbar />
@@ -130,6 +145,7 @@ export default function Home() {
             {
               value: "+50%",
               label: "Escalabilidad del sistema",
+              badge: "Reconocido",
               tooltip: "Refactorización a lógica modular y reutilización de componentes",
             },
             {
@@ -140,6 +156,7 @@ export default function Home() {
             {
               value: "99%",
               label: "Eliminación duplicados",
+              badge: "Reconocido",
               tooltip: "Detección y limpieza automática de inconsistencias",
             },
           ].map((item, i) => (
@@ -148,6 +165,14 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               className="relative group text-center p-4 rounded-xl bg-white/40 backdrop-blur-sm shadow-sm cursor-default"
             >
+
+              {/* BADGE */}
+              {item.badge && (
+                <span className="absolute top-2 right-2 text-[10px] px-2 py-1 bg-[var(--primary)] text-white rounded-md">
+                  {item.badge}
+                </span>
+              )}
+
               <p className="text-3xl font-semibold text-[var(--primary)]">
                 {item.value}
               </p>
@@ -172,6 +197,30 @@ export default function Home() {
           ))}
         </section>
       </Reveal>
+
+      {/* RESPALDO VISUAL */}
+      <section className="px-10 py-10 max-w-5xl mx-auto">
+        <h3 className="text-2xl font-semibold mb-8 relative inline-block">
+          Reconocimientos que respaldan resultados obtenidos
+          <span className="block h-[2px] w-12 bg-[var(--secondary)] mt-2"></span>
+        </h3>
+        <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto opacity-90">
+          <img
+            src="/images/premio1.jpg"
+            alt="Premio excelencia"
+            onClick={() => setSelectedImage("/images/premio1.jpg")}
+            className="rounded-lg object-cover w-full h-[180px] cursor-pointer hover:opacity-100 transition"
+          />
+
+          <img
+            src="/images/premio2.jpg"
+            alt="Premio mejor talento"
+            onClick={() => setSelectedImage("/images/premio2.jpg")}
+            className="rounded-lg object-cover w-full h-[180px] cursor-pointer hover:opacity-100 transition"
+          />
+        </div>
+
+      </section>
 
       {/* PROBLEMAS */}
       <section id="impact" className="px-10 py-20 max-w-5xl mx-auto">
@@ -224,18 +273,24 @@ export default function Home() {
 
       {/* PERSONAL */}
       <section className="px-10 py-20 max-w-4xl mx-auto">
-        <div className="bg-white/60 backdrop-blur-md rounded-2xl p-8 shadow-sm">
-
-          <h2 className="text-xl font-semibold mb-4 text-[var(--primary)]">
-            Más allá del código
-          </h2>
-
-          <p className="text-base text-gray-600 leading-relaxed font-light">
-            Fuera del código, disfruto pintar en acrílico y crear pastelería,
-            explorando procesos creativos que también aplico en el desarrollo de soluciones.
-          </p>
-
+        <h2 className="text-xl font-semibold mb-4 text-[var(--primary)]">
+          Más allá del código
+        </h2>
+        <p className="text-base text-gray-600 leading-relaxed font-light">
+          Fuera del código, disfruto pintar en acrílico y crear pastelería,
+          explorando procesos creativos que también aplico en el desarrollo de soluciones.
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+          {images.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              onClick={() => setSelectedIndex(i)}
+              className="w-full h-[200px] object-cover rounded-lg cursor-pointer hover:opacity-80 transition"
+            />
+          ))}
         </div>
+
       </section>
 
       {/* CONTACTO */}
@@ -279,6 +334,61 @@ export default function Home() {
           Built by Jeanette Zenteno
         </div>
       </footer>
+
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="preview"
+            className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+          />
+        </div>
+      )}
+      {selectedIndex !== null && (
+        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+
+          {/* flecha izquierda */}
+          <button
+            onClick={() =>
+              setSelectedIndex((prev) =>
+                prev === 0 ? images.length - 1 : prev! - 1
+              )
+            }
+            className="absolute left-6 text-white text-3xl"
+          >
+            ‹
+          </button>
+
+          {/* imagen */}
+          <img
+            src={images[selectedIndex]}
+            className="max-w-[90%] max-h-[85%] rounded-lg"
+          />
+
+          {/* flecha derecha */}
+          <button
+            onClick={() =>
+              setSelectedIndex((prev) =>
+                prev === images.length - 1 ? 0 : prev! + 1
+              )
+            }
+            className="absolute right-6 text-white text-3xl"
+          >
+            ›
+          </button>
+
+          {/* cerrar */}
+          <div
+            onClick={() => setSelectedIndex(null)}
+            className="absolute top-6 right-6 text-white text-xl cursor-pointer"
+          >
+            ✕
+          </div>
+        </div>
+      )}
     </main>
   );
 }
