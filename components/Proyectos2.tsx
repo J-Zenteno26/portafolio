@@ -32,23 +32,22 @@ export default function Proyectos2() {
         subtitle: "Web App · PHP · AWS (EC2 · RDS)",
         desc: "MVP en desarrollo para automatizar el cálculo de costos y precios de venta basados en recetas.",
         image: "/projects/version4.png",
-        link: "https://github.com/J-Zenteno26/recep_app",
+        link: "https://github.com/J-Zenteno26/DigiPyme",
         details: "Permite modelar recetas, calcular costos unitarios, márgenes y apoyar la toma de decisiones en negocios gastronómicos.",
     },
     {
         title: "Complet.in",
         subtitle: "Web App · JavaScript · Frontend",
         desc: "Sistema de cálculo dinámico de insumos basado en reglas de consumo y distribución de productos.",
-        image: "/projects/bitacora_registro.png",
-        link: "TU_LINK_AQUI",
+        image: "/projects/completin1.png",
+        link: "https://github.com/J-Zenteno26/Complet_in",
         details: "Permite definir escenarios de consumo, distribuir tipos de completos y obtener automáticamente el cálculo de insumos necesarios para eventos o producción.",
       },
       {
           title: "Bitácora Botánica",
           subtitle: "Web App · JavaScript · Google Sheets API",
           desc: "Sistema de captura y análisis de datos ambientales para monitoreo de cultivos.",
-          image: "/projects/bitacora.png",
-          link: "bitacora_registro",
+          image: "/projects/bitacora_registro.png",
           details: "Integra registro estructurado de variables (T°, humedad, riego) y visualización de datos históricos para análisis y toma de decisiones.",
       }
   ];
