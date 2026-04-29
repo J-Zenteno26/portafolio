@@ -5,55 +5,94 @@ import { motion } from "framer-motion";
 export default function Skills() {
   const skills = [
     {
-      category: "Backend & Desarrollo",
-      items: ["Python", "JavaScript", "ASP.NET", "Flask"],
+      category: "Software Engineering",
+      items: [
+        "PHP · C# · ASP.NET · JavaScript",
+        "Next.js· HTML · CSS",
+        "APIs",
+        "Refactorización",
+        "Escalabilidad ",
+        "Mantenibilidad",
+        "Optimización y eficiencia del sistema"
+
+      ],
     },
     {
-      category: "Data & Bases de Datos",
+      category: "Data & Analytics",
+      items: [
+        "Análisis exploratorio (EDA)",
+        "ETL",
+        "Data Wrangling",
+        "Estadística aplicada",
+        "Visualización de datos",
+        "Interpretación de datos"
+      ],
+    },
+    {
+      category: "Bases de Datos",
       items: [
         "SQL Avanzado",
-        "Data Modeling",
-        "ETL",
-        "Procesamiento de Datos",
+        "Diseño relacional",
+        "Stored Procedures",
+        "Triggers",
+        "Optimización de funciones con SQL",
       ],
     },
     {
-      category: "Arquitectura & Optimización",
+      category: "Machine Learning & Models",
       items: [
-        "Refactorización",
-        "Automatización",
-        "Escalabilidad",
-        "Optimización de procesos",
+        "Python",
+        "Modelos de regresión y clasificación",
+        "Evaluación de modelos",
+        "Scikit-learn",
+        "Preprocesamiento de datos",
+        "Feature engineering",
+      ],
+    },
+     {
+      category: "Deep Learning",
+      items: [
+        "Redes Neuronales (ANN)",
+        "Convolutional Neural Networks (CNN)",
+        "Clasificación de imágenes"
       ],
     },
     {
-      category: "Herramientas & Integración",
-      items: ["Bizagi", "GitHub", "APIs", "Google Sheets API"],
+      category: "Herramientas & Procesos",
+      items: [
+        "GitHub",
+        "Vercel",
+        "AWS",
+        "Bizagi",
+        "Jira",
+        "Trello",
+        "Google Sheets API",
+      ],
     },
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="grid gap-5 md:grid-cols-2">
       {skills.map((group, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
+          transition={{ duration: 0.45, delay: i * 0.06 }}
+          className="rounded-3xl border border-[var(--accent)]/20 bg-white/65 p-5 shadow-sm shadow-black/[0.03] backdrop-blur-sm transition-all duration-300 hover:border-[var(--accent)]/40 hover:shadow-lg hover:shadow-black/[0.06]"
         >
           {/* TITULO CATEGORIA */}
-          <h3 className="text-sm font-semibold text-[var(--secondary)] mb-3 relative inline-block">
+          <h3 className="mb-4 text-sm font-semibold text-[var(--primary)]">
             {group.category}
-            <span className="block h-[2px] w-10 bg-[var(--secondary)] mt-1"></span>
           </h3>
 
           {/* SKILLS */}
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             {group.items.map((skill, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -4, scale: 1.03 }}
-                className="px-4 py-2 border border-gray-200 rounded-xl bg-white/50 backdrop-blur-sm text-sm transition-all duration-300 hover:shadow-md cursor-default"
+                whileHover={{ y: -2 }}
+                className="rounded-full border border-[var(--accent)]/20 bg-[var(--light)]/60 px-3.5 py-1.5 text-xs md:text-sm text-[var(--primary)] transition-all duration-300 hover:bg-white hover:shadow-sm cursor-default"
               >
                 {skill}
               </motion.div>

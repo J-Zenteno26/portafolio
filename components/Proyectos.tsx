@@ -19,14 +19,15 @@ export default function Proyectos() {
 
   const data = [
     {
-      title: "Sistema de gestión de pedidos",
-      subtitle: "Web App · React",
-      desc: "Aplicación para gestionar pedidos, clientes e ítems en un negocio real.",
-      image: "/projects/pedidos.png",
-      link: "https://github.com/J-Zenteno26/recep_app",
+      title: "Fraud Detection",
+      subtitle: "Data Science · Machine Learning · Python",
+      desc: "Proyecto de Machine Learning orientado a la detección de fraude.",
+      image: "/projects/FraudDetection.png",
+      link: "https://github.com/J-Zenteno26/FraudDetection",
       details:
-        "Aplicación desarrollada en React que permite gestionar pedidos, clientes e ítems mediante operaciones CRUD, optimizando la gestión de un negocio real.",
+        "Detectar transacciones fraudulentas con el menor número de falsos positivos.",
     },
+
     {
       title: "Análisis de comportamiento de clientes",
       subtitle: "Data Analysis · Python",
@@ -37,7 +38,7 @@ export default function Proyectos() {
         "Análisis exploratorio de datos enfocado en detectar patrones de compra, correlaciones y comportamiento de clientes mediante visualizaciones y estadísticas.",
     },
     {
-      title: "Modelo de predicción de clientes",
+      title: "Modelo predictivo de compras en clientes",
       subtitle: "Machine Learning · Python",
       desc: "Modelo predictivo para estimar comportamiento de clientes.",
       image: "/projects/ml.png",
@@ -57,13 +58,11 @@ export default function Proyectos() {
   ];
 
   return (
-    <div className="relative px-10">
+    <div className="relative px-8 md:px-10">
       {/* IZQUIERDA */}
       <button
         onClick={() => scroll("left")}
-        className="absolute -left-8 top-1/2 -translate-y-1/2 z-10 
-        bg-white/80 backdrop-blur-md p-3 rounded-full shadow-md 
-        hover:scale-110 transition"
+        className="absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-11 w-11 flex items-center justify-center rounded-full border border-[var(--accent)]/25 bg-white/80 text-[var(--primary)] shadow-lg shadow-black/[0.06] backdrop-blur-md hover:bg-[var(--light)] hover:-translate-y-1/2 hover:scale-105 transition"
       >
         ←
       </button>
@@ -71,41 +70,43 @@ export default function Proyectos() {
       {/* SCROLL */}
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6 py-4"
+        className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-2 md:px-6 py-5 scrollbar-hide"
       >
         {data.map((proj, i) => (
           <motion.div
             key={i}
-            whileHover={{ scale: 1.03 }}
-            className="group min-w-[300px] max-w-[300px] snap-start bg-white/40 backdrop-blur-sm border rounded-xl shadow-md p-4 flex-shrink-0 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            whileHover={{ y: -5 }}
+            className="group min-w-[300px] max-w-[300px] snap-start flex-shrink-0 overflow-hidden rounded-3xl border border-white/70 bg-white/70 p-4 shadow-lg shadow-black/[0.04] backdrop-blur-sm transition-all duration-300 hover:border-[var(--accent)]/40 hover:shadow-xl hover:shadow-black/[0.08]"
           >
             {/* IMAGEN */}
-            <img
-              src={proj.image}
-              alt={proj.title}
-              className="rounded-lg mb-4 h-40 w-full object-cover group-hover:scale-[1.03] transition"
-            />
+            <div className="overflow-hidden rounded-2xl border border-black/5 bg-[var(--light)]">
+              <img
+                src={proj.image}
+                alt={proj.title}
+                className="h-40 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+            </div>
 
             {/* TITULO */}
-            <h3 className="font-semibold text-lg">
+            <h3 className="mt-5 font-semibold text-lg leading-snug text-[var(--primary)]">
               {proj.title}
             </h3>
 
-            <span className="text-xs text-gray-400">
+            <span className="mt-2 inline-flex rounded-full bg-[var(--light)] px-3 py-1 text-[11px] font-medium text-[var(--secondary)]">
               {proj.subtitle}
             </span>
 
             {/* DESCRIPCIÓN */}
-            <p className="text-sm mt-2 text-gray-600">
+            <p className="text-sm mt-4 text-gray-600 leading-relaxed">
               {proj.desc}
             </p>
 
             {/* VER MÁS */}
             <button
               onClick={() => setActive(active === i ? null : i)}
-              className="text-sm mt-2 text-[var(--primary)] hover:underline"
+              className="mt-4 text-sm font-medium text-[var(--primary)] hover:text-[var(--secondary)] transition"
             >
-              {active === i ? "Ver menos" : "Ver más"}
+              {active === i ? "Ver menos ↑" : "Ver más ↓"}
             </button>
 
             {/* DETALLE */}
@@ -118,7 +119,7 @@ export default function Proyectos() {
               }
               className="overflow-hidden"
             >
-              <p className="text-sm mt-2 text-gray-600">
+              <p className="text-sm mt-4 text-gray-700 border-t border-black/10 pt-4 leading-relaxed">
                 {proj.details}
               </p>
             </motion.div>
@@ -127,7 +128,7 @@ export default function Proyectos() {
             <a
               href={proj.link}
               target="_blank"
-              className="inline-block mt-4 text-sm text-[var(--primary)] hover:underline"
+              className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[var(--primary)] px-4 py-2.5 text-sm font-medium text-white shadow-md shadow-black/10 hover:bg-[var(--secondary)] transition"
             >
               Ver proyecto →
             </a>
@@ -138,9 +139,7 @@ export default function Proyectos() {
       {/* DERECHA */}
       <button
         onClick={() => scroll("right")}
-        className="absolute -right-8 top-1/2 -translate-y-1/2 z-10 
-        bg-white/80 backdrop-blur-md p-3 rounded-full shadow-md 
-        hover:scale-110 transition"
+        className="absolute -right-3 md:-right-8 top-1/2 -translate-y-1/2 z-10 h-11 w-11 flex items-center justify-center rounded-full border border-[var(--accent)]/25 bg-white/80 text-[var(--primary)] shadow-lg shadow-black/[0.06] backdrop-blur-md hover:bg-[var(--light)] hover:-translate-y-1/2 hover:scale-105 transition"
       >
         →
       </button>

@@ -7,20 +7,20 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[var(--bg)]/70 border-b border-black/5">
-
-      <div className="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto">
+    <nav className="fixed top-4 left-0 w-full z-50 px-4">
+      <div className="flex justify-between items-center px-5 md:px-6 py-3 max-w-6xl mx-auto rounded-full border border-white/60 bg-white/55 backdrop-blur-xl shadow-lg shadow-black/[0.04]">
 
         {/* LOGO / NOMBRE */}
         <h2 className="font-semibold text-[var(--primary)] tracking-tight text-lg">
-            Jeanette
+           Jeanette <span className="text-[var(--secondary)]">Zenteno</span>
         </h2>
 
         {/* DESKTOP */}
-        <div className="hidden md:flex items-center gap-8 text-sm text-gray-700">
+        <div className="hidden md:flex items-center gap-1 text-sm text-gray-700">
           {[
             { href: "#about", label: "Sobre mí" },
             { href: "#impact", label: "Impacto" },
+            { href: "#proyectos", label: "Proyectos" },
             { href: "#experience", label: "Experiencia" },
             { href: "#education", label: "Educación" },
             { href: "#skills", label: "Skills" },
@@ -29,12 +29,9 @@ export default function Navbar() {
             <a
               key={i}
               href={item.href}
-              className="relative hover:text-[var(--primary)] transition-colors duration-300"
+              className="rounded-full px-4 py-2 text-sm hover:bg-[var(--light)] hover:text-[var(--primary)] transition-all duration-300"
             >
               {item.label}
-
-              {/* underline animado */}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary)] transition-all duration-300 hover:w-full"></span>
             </a>
           ))}
         </div>
@@ -42,7 +39,7 @@ export default function Navbar() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-sm text-[var(--primary)]"
+          className="md:hidden rounded-full border border-[var(--accent)]/20 bg-[var(--light)]/70 px-4 py-2 text-sm font-medium text-[var(--primary)]"
         >
           {open ? "Cerrar" : "Menu"}
         </button>
@@ -56,10 +53,9 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden px-6 pb-6"
+            className="md:hidden px-1 pt-3"
           >
-            <div className="bg-white/90 backdrop-blur-lg rounded-xl shadow-lg border p-4 flex flex-col gap-4 text-sm">
-
+            <div className="mx-auto max-w-6xl rounded-3xl border border-white/70 bg-white/85 p-4 shadow-xl shadow-black/[0.06] backdrop-blur-xl flex flex-col gap-2 text-sm">
               {[
                 { href: "#about", label: "Sobre mí" },
                 { href: "#impact", label: "Impacto" },
@@ -72,12 +68,11 @@ export default function Navbar() {
                   key={i}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="hover:text-[var(--primary)] transition-colors duration-200"
+                  className="rounded-2xl px-4 py-3 text-[var(--primary)] hover:bg-[var(--light)] transition-colors duration-200"
                 >
                   {item.label}
                 </a>
               ))}
-
             </div>
           </motion.div>
         )}

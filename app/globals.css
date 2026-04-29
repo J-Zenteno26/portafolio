@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f5f1e9;
-  --primary: #355f4a;
-  --secondary: #6b8f71;
-  --text: #2b2b2b;
+  --bg: #f4f7f5;
+  --primary: #1f3d2b;
+  --secondary: #3e6b4f;
+  --accent: #7fb77e;
+  --light: #e8f1ec;
+  --text: #1c1c1c;
 }
 
 /* SMOOTH FONT (premium look) */
@@ -95,7 +97,24 @@ body {
       rgba(245, 241, 233, 0.62) 100%
     );
 }
+.hero {
+  position: relative;
+}
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.2)
+  );
+}
+.hero-content {
+  max-width: 600px;
+  backdrop-filter: blur(4px);
+}
 /* RESPONSIVE */
 
 @media (min-width: 768px) {
@@ -110,4 +129,78 @@ body {
   body {
     font-size: 1.1rem;
   }
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: white;
+  border-radius: 12px;
+  padding: 12px 20px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 12px;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: white;
+}
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.problem-card {
+  border-left: 4px solid var(--accent);
+  padding-left: 20px;
+}
+.problem-card li {
+  color: var(--secondary);
+}
+
+.skill {
+  background: var(--light);
+  color: var(--primary);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+a, button {
+  transition: all 0.2s ease;
+}
+
+section {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

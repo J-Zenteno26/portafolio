@@ -54,28 +54,28 @@ export default function Problemas() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="grid gap-4 md:grid-cols-2">
       {data.map((card, i) => (
         <motion.div
           key={i}
           onClick={() => setActive(active === i ? null : i)}
-          whileHover={{ y: -5 }}
-          className="group border p-6 rounded-xl bg-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg cursor-pointer"
+          whileHover={{ y: -4 }}
+          className="group cursor-pointer rounded-2xl border border-[var(--accent)]/20 bg-white/65 p-4 md:p-5 shadow-sm shadow-black/[0.03] backdrop-blur-sm transition-all duration-300 hover:border-[var(--accent)]/40 hover:shadow-lg hover:shadow-black/[0.06]"
         >
-          <h3 className="font-semibold text-lg group-hover:text-[var(--primary)] transition">
+          <h3 className="text-base font-semibold leading-snug text-[var(--primary)] transition group-hover:text-[var(--secondary)]">
             {card.title}
           </h3>
 
-          <p className="text-sm mt-2 text-gray-600">
+          <p className="mt-2 text-xs md:text-sm leading-relaxed text-gray-600">
             {card.desc}
           </p>
 
           {/* LISTA */}
-          <ul className="mt-4 space-y-2 text-sm text-gray-700">
+          <ul className="mt-3 space-y-1.5 text-xs md:text-sm text-gray-700">
             {card.items.map((item, idx) => (
               <li
                 key={idx}
-                className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-[var(--secondary)]"
+                className="relative pl-4 leading-relaxed before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-[var(--secondary)]"
               >
                 {item}
               </li>
@@ -92,12 +92,12 @@ export default function Problemas() {
             }
             className="overflow-hidden"
           >
-            <p className="mt-4 text-sm text-gray-700 border-t pt-4">
+            <p className="mt-4 border-t border-black/10 pt-4 text-xs md:text-sm leading-relaxed text-gray-700">
               {card.details}
             </p>
           </motion.div>
 
-          <p className="text-xs mt-4 text-gray-400">
+          <p className="mt-4 text-[11px] text-gray-400">
             {active === i ? "Click para cerrar" : "Click para ver más"}
           </p>
         </motion.div>
