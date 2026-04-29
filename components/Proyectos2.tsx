@@ -48,7 +48,7 @@ export default function Proyectos2() {
           subtitle: "Web App · JavaScript · Google Sheets API",
           desc: "Sistema de captura y análisis de datos ambientales para monitoreo de cultivos.",
           image: "/projects/bitacora.png",
-          link: "TU_LINK_AQUI",
+          link: "bitacora_registro",
           details: "Integra registro estructurado de variables (T°, humedad, riego) y visualización de datos históricos para análisis y toma de decisiones.",
       }
   ];
