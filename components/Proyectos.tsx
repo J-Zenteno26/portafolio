@@ -18,6 +18,15 @@ export default function Proyectos() {
   };
 
   const data = [
+     {
+      title: "Netflix Content Classification",
+      subtitle: "Data Science · Machine Learning · Python",
+      desc: "Clasificación de contenido de Netflix aplicando análisis de datos y modelos de Machine Learning.",
+      image: "/projects/proporcion_donut.png",
+      link: "https://github.com/J-Zenteno26/NetflixClasificadorML",   
+      details:
+        "Proyecto de ciencia de datos enfocado en el análisis, visualización y clasificación de contenido de Netflix. Incluye limpieza de datos, análisis exploratorio, preparación de variables, entrenamiento de modelos y evaluación de desempeño con métricas de clasificación.",
+        },
     {
       title: "Fraud Detection",
       subtitle: "Data Science · Machine Learning · Python",
