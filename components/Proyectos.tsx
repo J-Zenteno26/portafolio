@@ -18,7 +18,16 @@ export default function Proyectos() {
   };
 
   const data = [
-     {
+    {
+      title: "Spotify Music Clustering",
+      subtitle: "Data Science · Machine Learning · Python",
+      desc: "Segmentación no supervisada de canciones de Spotify usando características de audio, clustering y reducción dimensional.",
+      image: "/projects/generosdominantes_porcluster.png",
+      link: "https://github.com/J-Zenteno26/SpotifyMusicClustering",
+      details:
+        "Proyecto de ciencia de datos enfocado en aprendizaje no supervisado. Se aplicó análisis exploratorio, limpieza de datos, escalamiento de variables, K-Means Clustering, evaluación con método del codo y Silhouette Score, además de visualización con PCA y t-SNE. Los clústeres fueron interpretados según características musicales como energía, bailabilidad, acousticness, valence, liveness y speechiness.",
+    },
+    {
       title: "Netflix Content Classification",
       subtitle: "Data Science · Machine Learning · Python",
       desc: "Clasificación de contenido de Netflix aplicando análisis de datos y modelos de Machine Learning.",
@@ -26,7 +35,7 @@ export default function Proyectos() {
       link: "https://github.com/J-Zenteno26/NetflixClasificadorML",   
       details:
         "Proyecto de ciencia de datos enfocado en el análisis, visualización y clasificación de contenido de Netflix. Incluye limpieza de datos, análisis exploratorio, preparación de variables, entrenamiento de modelos y evaluación de desempeño con métricas de clasificación.",
-        },
+    },
     {
       title: "Fraud Detection",
       subtitle: "Data Science · Machine Learning · Python",
@@ -92,7 +101,7 @@ export default function Proyectos() {
               <img
                 src={proj.image}
                 alt={proj.title}
-                className="h-40 w-full object-cover transition duration-500 group-hover:scale-105"
+                className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
               />
             </div>
 
