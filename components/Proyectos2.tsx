@@ -57,7 +57,7 @@ export default function Proyectos2() {
       {/* IZQUIERDA */}
       <button
         onClick={() => scroll("left")}
-        className="absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-11 w-11 flex items-center justify-center rounded-full border border-[var(--accent)]/25 bg-white/80 text-[var(--primary)] shadow-lg shadow-black/[0.06] backdrop-blur-md hover:bg-[var(--light)] hover:scale-105 transition"
+        className="absolute left-1 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-9 w-9 md:h-11 md:w-11 flex items-center justify-center rounded-full border border-[var(--accent)]/20 bg-white/70 text-sm md:text-base text-[var(--primary)] shadow-md backdrop-blur-md hover:bg-[var(--light)] hover:-translate-y-1/2 hover:scale-105 transition"
       >
         ←
       </button>
@@ -71,7 +71,7 @@ export default function Proyectos2() {
           <motion.div
             key={i}
             whileHover={{ y: -5 }}
-            className="group min-w-[320px] max-w-[320px] snap-start flex-shrink-0 overflow-hidden rounded-3xl border border-[var(--accent)]/20 bg-white/70 p-5 shadow-lg shadow-black/[0.04] backdrop-blur-sm transition-all duration-300 hover:border-[var(--accent)]/40 hover:shadow-xl hover:shadow-black/[0.08]"
+            className="group min-w-[300px] max-w-[300px] snap-start flex-shrink-0 flex flex-col overflow-hidden rounded-3xl border border-white/70 bg-white/70 p-4 shadow-lg shadow-black/[0.04] backdrop-blur-sm transition-all duration-300 hover:border-[var(--accent)]/40 hover:shadow-xl hover:shadow-black/[0.08]"
           >
             {/* IMAGEN */}
             <div className="overflow-hidden rounded-2xl border border-black/5 bg-[var(--light)]">
@@ -96,7 +96,7 @@ export default function Proyectos2() {
             <p className="text-sm mt-4 text-gray-600 leading-relaxed">
               {proj.desc}
             </p>
-
+            <br></br>
             {/* VER MÁS */}
             <button
               onClick={() => setActive(active === i ? null : i)}
@@ -124,7 +124,7 @@ export default function Proyectos2() {
             <a
               href={proj.link}
               target="_blank"
-              className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[var(--secondary)] px-4 py-2.5 text-sm font-medium text-white shadow-md shadow-black/10 hover:bg-[var(--primary)] transition"
+              className="mt-auto inline-flex w-full items-center justify-center rounded-full bg-[var(--primary)] px-4 py-2.5 text-sm font-medium text-white shadow-md shadow-black/10 hover:bg-[var(--secondary)] transition"
             >
               Ver sistema →
             </a>
@@ -135,7 +135,7 @@ export default function Proyectos2() {
       {/* DERECHA */}
       <button
         onClick={() => scroll("right")}
-        className="absolute -right-3 md:-right-8 top-1/2 -translate-y-1/2 z-10 h-11 w-11 flex items-center justify-center rounded-full border border-[var(--accent)]/25 bg-white/80 text-[var(--primary)] shadow-lg shadow-black/[0.06] backdrop-blur-md hover:bg-[var(--light)] hover:scale-105 transition"
+        className="absolute right-1 md:-right-8 top-1/2 -translate-y-1/2 z-10 h-9 w-9 md:h-11 md:w-11 flex items-center justify-center rounded-full border border-[var(--accent)]/20 bg-white/70 text-sm md:text-base text-[var(--primary)] shadow-md backdrop-blur-md hover:bg-[var(--light)] hover:-translate-y-1/2 hover:scale-105 transition"
       >
         →
       </button>

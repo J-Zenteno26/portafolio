@@ -218,7 +218,7 @@ export default function Home() {
 
 
       {/* PROBLEMAS */}
-      <section id="impact" className="px-6 md:px-10 py-24 max-w-6xl mx-auto">
+      <section id="impact" className="px-6 md:px-10 py-24 max-w-7xl mx-auto">
         <h2 className="text-3xl font-semibold mb-8 relative inline-block text-[var(--primary)]">
           Problemas que resolví
           <span className="block h-[3px] w-16 bg-[var(--accent)] mt-3 rounded-full"></span>
@@ -268,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* PROYECTOS */}
-      <section id="proyectos" className="px-6 md:px-10 py-24 max-w-6xl mx-auto">
+      <section id="proyectos" className="px-6 md:px-10 py-24 max-w-[1500px] mx-auto">
         <div className="mb-10">
           <p className="text-sm uppercase tracking-[0.25em] text-[var(--secondary)] mb-2">
             Portfolio técnico
@@ -282,7 +282,7 @@ export default function Home() {
       </section>
 
       {/* PROYECTOS */}
-      <section id="Proyectos" className="px-6 md:px-10 py-24 max-w-6xl mx-auto">
+      <section id="Proyectos" className="px-6 md:px-10 py-24 max-w-[1500px] mx-auto">
         <div className="mb-10">
           <p className="text-sm uppercase tracking-[0.25em] text-[var(--secondary)] mb-2">
             Desarrollo de software
@@ -306,7 +306,7 @@ export default function Home() {
 
       {/* SKILLS */}
       <Reveal>
-        <section id="skills" className="px-6 md:px-10 py-24 max-w-5xl mx-auto">
+        <section id="skills" className="px-6 md:px-10 py-24 max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold mb-8 relative inline-block text-[var(--primary)]">
             Skills
             <span className="block h-[3px] w-16 bg-[var(--accent)] mt-3 rounded-full"></span>
@@ -324,34 +324,6 @@ export default function Home() {
         </h2>
 
         <Educacion />
-      </section>
-
-      {/* PERSONAL */}
-      <section className="px-6 md:px-10 py-20 max-w-5xl mx-auto">
-        <div className="rounded-[2rem] bg-[var(--primary)] text-white p-6 md:p-10 shadow-lg shadow-black/10">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-            Más allá del código
-          </h2>
-
-          <p className="text-base md:text-lg text-white/75 leading-relaxed font-light max-w-3xl">
-            Fuera del código, disfruto pintar en acrílico y crear pastelería,
-            explorando procesos creativos que también aplico en el desarrollo de
-            soluciones.
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mt-8">
-            {images.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                loading="lazy"
-                decoding="async"
-                onClick={() => setSelectedIndex(i)}
-                className="w-full h-[140px] md:h-[190px] object-cover rounded-2xl cursor-pointer opacity-90 hover:opacity-100 transition-opacity duration-200"
-              />
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* CONTACTO */}
